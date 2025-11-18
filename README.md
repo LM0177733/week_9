@@ -18,8 +18,10 @@ function routePacket(fabric, start, goal):
    else
 
        return false // no valid route
+       }
        bool backtrack(node,node)
        {
+       visited=new[row,col]
        for(int i=0;visited.x(row).length;i++)
        {
         for(int j=0;visited.y(col).length;j++)
