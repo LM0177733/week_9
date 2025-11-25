@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class Tester {
-int[][] visited={{1,2,3,4},{1,2,3,4,5}};
- 
+
+ int[][] visited=new int[4][5];
+
 	public static void main(String[] args) {
 Scanner myObj = new Scanner(System.in);
 Tester newobj=new Tester();
- System.out.println("Type the number of rows & Columns you want in the array");
-System.out.println("In the format of number of ROWS first then number of COLUMNS");
- newobj.backtrack(1,5);
+
+
+newobj.backtrack(4,5);
 
     //   for(int j=0;j<visited.length;j++)
     //   {
@@ -26,13 +27,13 @@ System.out.println("In the format of number of ROWS first then number of COLUMNS
 
        public boolean backtrack(int rowint,int colint)
        {
-       
         Scanner myObj = new Scanner(System.in);
          for(int i=0;i<visited.length-1;i++)//
        {
-        for(int j=0;j<visited[rowint].length-1;j++)
+        for(int j=0;j<visited[rowint-1].length;j++)
        {
-        System.out.println("Enter value");
+         System.out.println("The values for rows and columns start at 0");
+        System.out.println("Enter value for row "+i+" & column "+j);
         visited[i][j]=myObj.nextInt();
        }
     }
